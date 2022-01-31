@@ -1,0 +1,22 @@
+.homepage-background {
+  background-color: #fff;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background-image: linear-gradient(40deg, rgba(77, 137, 228, 0.7), rgba(244, 244, 244, 0.7)),
+    url('https://media.discordapp.net/attachments/837038192355311627/937788723154792448/classroom-setting-1630914.jpg');
+}
+
+.homepage-logo {
+  margin-top: 10px;
+  height: 125px;
+  width: 350px;
+}
