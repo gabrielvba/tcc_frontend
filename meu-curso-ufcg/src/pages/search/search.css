@@ -1,0 +1,16 @@
+.search-content {
+  padding: 10%;
+}
+
+.search-courses {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-courseDetails {
+  border: solid;
+  border-color: aquamarine;
+  padding: 10px;
+  background-color: rgb(160, 207, 255);
+}
