@@ -26,6 +26,11 @@
   cursor: pointer;
 }
 
+/* .component-navbar-other-option:hover {
+  cursor: pointer;
+  background-color: rgba(197, 208, 226, 0.7);
+} */
+
 .component-navbar-selected {
   border-bottom: 5px solid #8ec6c5;
 }

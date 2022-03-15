@@ -8,6 +8,11 @@ import Home from './pages/homepage';
 import Profile from './pages/profile';
 import SchoolRecords from './pages/schoolRecords';
 import EditProfile from './pages/editProfile';
+import Disciplines from './pages/disciplines';
+import Course from './pages/course';
+import EditDiscipline from './pages/editDiscipline';
+import EdiCourse from './pages/editCourse';
+import Search from './pages/search';
 
 const queryClient = new QueryClient();
 toast.configure();
@@ -30,6 +35,36 @@ function App() {
               </Route>
               <Route exact path="/editProfile">
                 <EditProfile />
+              </Route>
+              <Route path="/editDiscipline/:id">
+                <EditDiscipline />
+              </Route>
+              <Route path="/course/:id/createDiscipline">
+                <EditDiscipline create />
+              </Route>
+              <Route path="/editCourse/:id">
+                <EdiCourse />
+              </Route>
+              <Route path="/createCourse">
+                <EdiCourse create />
+              </Route>
+              <Route exact path="/disciplines">
+                <Disciplines />
+              </Route>
+              <Route path="/seeCourse/:id">
+                <Course seeCourse />
+              </Route>
+              <Route path="/course/:id">
+                <Course />
+              </Route>
+              <Route path="/disciplines/course/:id">
+                <Disciplines />
+              </Route>
+              <Route path="/search">
+                <Search />
+              </Route>
+              <Route path="/changeCourse">
+                <Search change />
               </Route>
             </Switch>
           </main>

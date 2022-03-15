@@ -24,7 +24,7 @@ function Home() {
 
   return (
     <div className="homepage-background">
-      <Flex styles={{ width: '50%', margin: '0 auto' }}>
+      <Flex styles={{ width: '80%', margin: '0 auto' }}>
         <img
           src="https://cdn.discordapp.com/attachments/837038192355311627/937833279548186684/teste2.png"
           className="homepage-logo"

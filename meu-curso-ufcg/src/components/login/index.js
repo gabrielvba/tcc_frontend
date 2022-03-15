@@ -70,7 +70,7 @@ function Login() {
         onChange={setPassword}
         styles={labelPasswordStyle}
       />
-      <BaseButton onClick={auth} styles={{ width: '100%', fontWeight: 'bold' }}>
+      <BaseButton onClick={auth} styles={{ margin: '30px 0px', width: '100%', fontWeight: 'bold' }}>
         ENTRAR
       </BaseButton>
       <a onClick={logout} className="login-forget-password">

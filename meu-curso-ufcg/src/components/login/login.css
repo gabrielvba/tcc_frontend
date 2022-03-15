@@ -7,3 +7,7 @@
   color: #6983aa;
   cursor: pointer;
 }
+
+form {
+  width: 100%;
+}

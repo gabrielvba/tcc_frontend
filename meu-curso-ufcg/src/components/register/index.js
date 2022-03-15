@@ -66,7 +66,6 @@ function Register({ toLogin }) {
   };
 
   const registerUser = () => {
-    console.log('clicou');
     if (validateInfo()) {
       const newUser = {
         user: {
@@ -76,7 +75,6 @@ function Register({ toLogin }) {
           password,
         },
       };
-      console.log(newUser);
       register(newUser, setLoading, setPassword, toLogin);
     }
   };
@@ -104,7 +102,10 @@ function Register({ toLogin }) {
             onChange={setPassword}
             styles={labelPasswordStyle}
           />
-          <BaseButton onClick={registerUser} styles={{ width: '100%', fontWeight: 'bold' }}>
+          <BaseButton
+            onClick={registerUser}
+            styles={{ margin: '30px 0px', width: '100%', fontWeight: 'bold' }}
+          >
             CADASTRAR
           </BaseButton>
         </>
