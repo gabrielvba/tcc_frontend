@@ -1,8 +1,4 @@
-/* eslint-disable react/no-array-index-key */
-
-// import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-// import { useHistory } from 'react-router';
 
 import { getDisciplineDetails } from '../../api';
 import Loading from '../loading';
@@ -11,9 +7,6 @@ import './disciplineDetails.css';
 
 function DisciplineDetails(props) {
   const { id } = props;
-
-  //  const { id } = useParams();
-  //  const history = useHistory();
 
   const [discipline, setDisciplineData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);

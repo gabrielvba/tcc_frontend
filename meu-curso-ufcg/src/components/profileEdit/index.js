@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-boolean-value */
-
 import React, { useEffect, useState } from 'react';
 import Input from '../input';
 import BaseButton from '../button';

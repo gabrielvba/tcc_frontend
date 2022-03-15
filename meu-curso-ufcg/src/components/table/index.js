@@ -81,5 +81,5 @@ function Table(props) {
     </div>
   );
 }
-// selectionModel
+
 export default Table;

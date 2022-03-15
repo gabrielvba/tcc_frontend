@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 import React, { useEffect } from 'react';
 
 import Radio from '@material-ui/core/Radio';

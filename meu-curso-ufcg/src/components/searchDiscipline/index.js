@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 import React, { useState, useEffect } from 'react';
 
 import CardDiscipline from '../cardDiscipline';

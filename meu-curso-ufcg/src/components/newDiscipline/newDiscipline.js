@@ -1,7 +1,5 @@
-/* eslint-disable react/jsx-boolean-value */
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
-// import { useQuery } from 'react-query';
 
 import Radio from '@material-ui/core/Radio';
 
