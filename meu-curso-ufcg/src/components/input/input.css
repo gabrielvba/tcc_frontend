@@ -4,11 +4,11 @@
   color: black;
   padding: 10px 15px;
   border-radius: 15px;
-  border: none;
+  /* border: none; */
   appearance: none;
   outline: 0;
-  opacity: 70%;
-  margin: 0 auto 10px auto;
+  opacity: 90%;
+  margin: 0 auto 1px auto;
 }
 
 .input-label {

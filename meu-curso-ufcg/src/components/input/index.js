@@ -14,15 +14,18 @@ const iconButtonStyle = {
 };
 
 function Input(props) {
-  const { type = 'text', name, value, onChange, styles, onClick, children } = props;
+  const { type = 'text', name, value, onChange, styles, onClick, children, disabled } = props;
 
   return (
     <div style={{ marginTop: '15px', width: '100%', display: 'flex', flexDirection: 'column' }}>
-      <span className="input-label" style={styles?.label ?? {}}>
-        {name}
-      </span>
+      {name && (
+        <span className="input-label" style={styles?.label ?? {}}>
+          {name}
+        </span>
+      )}
       <div style={{ width: '100%' }}>
         <input
+          disabled={disabled}
           className="input-box-style"
           type={type}
           style={styles?.input ?? {}}
