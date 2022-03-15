@@ -1,0 +1,14 @@
+.fluxogramaOpt-component-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.fluxogramaOpt-component {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}

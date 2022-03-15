@@ -1,0 +1,38 @@
+.schoolRecords-flex-menu {
+  display: flex;
+  flex-direction: row;
+  margin: 0 5px 0 0;
+}
+
+.schoolRecords-flex-menu-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.schoolRecords-contente {
+  margin: 10px 0;
+}
+
+.schoolRecords-button button {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px 20px;
+  color: white;
+  transition: all 0.5s;
+  min-width: 150px;
+  border: none;
+  border-radius: 30px;
+}
+
+.schoolRecords-button button {
+  background-color: rgb(160, 207, 255);
+  border: 1px solid rgb(87, 233, 118);
+}
+
+.schoolRecords-button button:hover {
+  /* background: rgb(160, 207, 255); */
+  background: rgb(87, 233, 118);
+}

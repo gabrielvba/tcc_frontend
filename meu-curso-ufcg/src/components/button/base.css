@@ -1,0 +1,62 @@
+.component-button-base-button {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px 20px;
+  color: white;
+  transition: all 0.5s;
+  min-width: 150px;
+  border: none;
+  /* margin: 30px 0px; */
+  border-radius: 30px;
+}
+
+.component-button-base-profile {
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+  min-width: 130px;
+  border: none;
+  margin: 5px;
+}
+
+.component-button-base-button-color {
+  background-color: #8ec6c5;
+  border: 0px solid #8ec6c5;
+}
+
+.component-button-base-danger {
+  background-color: #db4747;
+  border: 0px solid #db4747;
+}
+
+.component-button-base-button::after {
+  font-weight: 400;
+  position: absolute;
+  left: 80%;
+  top: 54%;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.component-button-base-button:hover {
+  transition: all 0.5s;
+  border-radius: 30px;
+  border: none;
+}
+
+.component-button-base-button-color:hover {
+  background: blue;
+}
+
+.component-button-base-button-danger:hover {
+  background: #f77847;
+}
+
+.component-button-base-button:hover::after {
+  opacity: 1;
+  transition: all 0.5s;
+  color: #f4f4f4;
+}

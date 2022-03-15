@@ -1,0 +1,25 @@
+.course-flex-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.course-content {
+  margin: 10px 0;
+}
+
+.course-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 100%;
+  height: 100%;
+}
+
+.course-flex-row {
+  flex: 1;
+}
+
+.course-name {
+  font-size: x-large;
+}

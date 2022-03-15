@@ -26,7 +26,7 @@ module.exports = {
     'no-nested-ternary': 'off',
     'import/no-dynamic-require': 'off',
     'import/prefer-default-export': 'off',
-
+    'arrow-body-style': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/no-unescaped-entities': 'off',

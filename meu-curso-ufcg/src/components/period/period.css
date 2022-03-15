@@ -1,0 +1,25 @@
+.period-component {
+  width: 130px;
+  height: 35px;
+  margin: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+/* .period-component:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  cursor: pointer;
+} */
+
+.period-component-info {
+  flex: 2;
+  text-align: center;
+  text-overflow: ellipsis;
+  /* overflow: overlay; */
+  /* overflow: hidden; */
+  width: 100%;
+}

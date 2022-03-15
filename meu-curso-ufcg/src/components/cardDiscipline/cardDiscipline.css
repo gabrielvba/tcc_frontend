@@ -1,0 +1,76 @@
+.discipline-card {
+  width: 130px;
+  height: 70px;
+  margin: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-overflow: ellipsis;
+  /* overflow: hidden; */
+  overflow: overlay;
+}
+
+.discipline-card::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.discipline-card::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+.discipline-card::-webkit-scrollbar-thumb {
+  background: rgb(7, 7, 7);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.discipline-card::-webkit-scrollbar-thumb:hover {
+  background: #009eb3;
+}
+
+.discipline-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  cursor: pointer;
+}
+
+.cardDiscipline-alert {
+  border: solid;
+  border-color: white;
+  color: white;
+}
+
+.cardDiscipline-defaut {
+  background-color: rgb(160, 207, 255);
+}
+
+.cardDiscipline-complete {
+  background-color: rgb(87, 233, 118);
+}
+
+.discipline-edit-info-icon {
+  display: flex;
+  align-items: flex-start;
+}
+
+.cardDiscipline-title {
+  margin: auto;
+  text-align: center;
+  word-wrap: break-word;
+  position: relative;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.component-cardDiscipline-edit {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  flex: 2;
+}

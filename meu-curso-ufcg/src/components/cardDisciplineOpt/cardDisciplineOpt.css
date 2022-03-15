@@ -1,0 +1,57 @@
+.cardDisciplineOpt-card {
+  width: 130px;
+  height: 70px;
+  margin: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-overflow: ellipsis;
+  /* overflow: hidden; */
+  overflow: overlay;
+}
+
+.cardDisciplineOpt-card::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.cardDisciplineOpt-card::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+.cardDisciplineOpt-card::-webkit-scrollbar-thumb {
+  background: rgb(7, 7, 7);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.cardDisciplineOpt-card::-webkit-scrollbar-thumb:hover {
+  background: #009eb3;
+}
+
+.cardDisciplineOpt-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  cursor: pointer;
+}
+
+.cardDisciplineOpt-defaut {
+  background-color: rgb(160, 207, 255);
+}
+
+.cardDisciplineOpt-complete {
+  background-color: rgb(87, 233, 118);
+}
+
+.cardDisciplineOpt-card-name {
+  margin: auto;
+  text-align: center;
+  word-wrap: break-word;
+  position: relative;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}

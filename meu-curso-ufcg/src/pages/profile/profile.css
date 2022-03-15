@@ -1,0 +1,68 @@
+.profile-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: row;
+  background-color: aliceblue;
+  height: 400px;
+}
+
+.profile-CurrentCourseInfo {
+  margin: 10px;
+  flex: 1;
+  align-items: center;
+  height: 100px;
+}
+
+.profile-userInfo {
+  margin: 10px;
+  flex: 1;
+  height: 100px;
+  align-items: center;
+}
+
+.profile-myCourses {
+  min-height: 70px;
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.label {
+  color: black;
+  margin-right: 10px;
+}
+
+.profile-userInfo-ChangeCourse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: x-large;
+  margin: 30px;
+}
+.profile-userInfo-aligned {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-edit-info-icon {
+  display: flex;
+  align-items: flex-start;
+}
+
+.profile-userInfo-aligned p {
+  font-size: x-large;
+}
+
+.profile-userInfo-course {
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
