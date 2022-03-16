@@ -48,7 +48,8 @@
 }
 
 .component-button-base-button-color:hover {
-  background: blue;
+  background: aquamarine;
+  color: black;
 }
 
 .component-button-base-button-danger:hover {

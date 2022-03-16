@@ -7,15 +7,10 @@ import BaseButton from '../../components/button';
 import Navbar from '../../components/navbar/Navbar';
 import IconEdit from '../../components/icons/iconEdit';
 import Card from '../../components/card';
-import Progressbar from '../../components/progressBar';
+import CourseProgress from '../../components/courseProgress';
 
 import { getUserInfo } from '../../api';
 import './profile.css';
-import {
-  DISCIPLINA_OPT_GERAL,
-  DISCIPLINA_OPT_ESPECIFICA,
-  STATUS_CONCLUIDA,
-} from '../../utils/constants';
 
 function Profile() {
   const [courses, setCourses] = useState([]);
@@ -46,27 +41,6 @@ function Profile() {
     history.push('/changeCourse');
   };
 
-  function calculaProgresso(type) {
-    let creditos = 0;
-    let porcentagem = 0;
-    if (profile != null && profile.currentCourse) {
-      const aux = schoolRecords.filter(
-        (e) => e.type === type && e.SchoolRecords.status === STATUS_CONCLUIDA
-      );
-      aux.forEach((e) => {
-        creditos += e.value;
-      });
-      if (type === DISCIPLINA_OPT_ESPECIFICA)
-        porcentagem = (creditos * 100) / profile.currentCourse.minOptSpecific;
-      if (type === DISCIPLINA_OPT_GERAL)
-        porcentagem = (creditos * 100) / profile.currentCourse.minOptGeneral;
-    }
-    return porcentagem;
-  }
-
-  const totalOptG = calculaProgresso(DISCIPLINA_OPT_GERAL);
-  const totalOptE = calculaProgresso(DISCIPLINA_OPT_ESPECIFICA);
-
   return (
     <Navbar data={data}>
       <div className="profile-flex">
@@ -92,24 +66,7 @@ function Profile() {
             )}
           </div>
           <div className="profile-CurrentCourseInfo">
-            <div className="profile-userInfo-aligned">
-              {profile != null && profile.currentCourse ? (
-                <div className="profile-userInfo-course">
-                  <p>{profile.currentCourse.name}</p>
-                  <span>Optativas gerais</span>
-                  <Progressbar bgcolor="aquamarine" progress={totalOptG} height={30} />
-                  <span>Optativas especificas</span>
-                  <Progressbar bgcolor="aquamarine" progress={totalOptE} height={30} />
-                </div>
-              ) : (
-                <div className="profile-userInfo-course">
-                  <p className="label">Você não está vinculado a nenhum curso</p>
-                  <BaseButton styles={{ heigh: '70px', width: '130px' }} onClick={changeCourse}>
-                    Buscar Curso
-                  </BaseButton>
-                </div>
-              )}
-            </div>
+            <CourseProgress profile={profile} schoolRecords={schoolRecords} />
           </div>
           <div className="profile-edit-info-icon">
             <Tooltip title="editar informações">
