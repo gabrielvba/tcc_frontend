@@ -28,11 +28,12 @@
 }
 
 .schoolRecords-button button {
-  background-color: rgb(160, 207, 255);
-  border: 1px solid rgb(87, 233, 118);
+  background-color: #8ec6c5;
+  /* background-color: rgb(160, 207, 255); */
+  /* border: 1px solid rgb(87, 233, 118); */
 }
 
 .schoolRecords-button button:hover {
-  /* background: rgb(160, 207, 255); */
-  background: rgb(87, 233, 118);
+  background: aquamarine;
+  /* background: rgb(87, 233, 118); */
 }

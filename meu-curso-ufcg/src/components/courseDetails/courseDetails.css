@@ -33,6 +33,7 @@
 
 .courseDetails-courseDetailsComponent-info-description::-webkit-scrollbar {
   width: 5px;
+  height: 10px;
 }
 
 /* Track */
@@ -49,5 +50,5 @@
 
 /* Handle on hover */
 .courseDetails-courseDetailsComponent-info-description::-webkit-scrollbar-thumb:hover {
-  background: #009eb3;
+  background: rgb(7, 7, 7);
 }

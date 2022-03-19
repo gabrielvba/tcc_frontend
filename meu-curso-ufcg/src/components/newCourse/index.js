@@ -135,23 +135,23 @@ function NewCourse(props) {
         </div>
       ) : (
         <div className="component-newCourse-flex-modal">
-          <Input name="NOME" value={name} onChange={setName} styles={labelNameStyle} />
+          <Input name="Nome:" value={name} onChange={setName} styles={labelNameStyle} />
           <Input
-            name="DESCRIÇÃO"
+            name="Descrição:"
             value={description}
             onChange={setDescription}
             styles={labelDescriptionStyle}
           />
           <Input
             type="number"
-            name="Creditos Minimo Optativas Gerais"
+            name="Créditos Mínimo em disciplinas Optativas Gerais"
             value={minOptGeneral}
             onChange={setMinOptGeneral}
             styles={labelMinOptGeneral}
           />
           <Input
             type="number"
-            name="Creditos Minimo Optativas Especificas"
+            name="Créditos Mínimos em disciplinas Optativas Especificas"
             value={minOptSpecific}
             onChange={setMinOptSpecific}
             styles={labelMinOptSpecific}
@@ -162,7 +162,6 @@ function NewCourse(props) {
               margin: '30px 0px',
               width: '100%',
               fontWeight: 'bold',
-              backgroundColor: 'blue',
             }}
           >
             {isCreate ? 'CRIAR' : 'ATUALIZAR'}

@@ -40,9 +40,9 @@ function NewDiscipline(props) {
   const { id, isCreate } = props;
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [code, setCode] = useState('');
+  const [code, setCode] = useState(null);
   const [summary, setSummary] = useState('');
-  const [period, setPeriod] = useState('');
+  const [period, setPeriod] = useState(null);
   const [type, setType] = useState(DISCIPLINA_OBRIGATORIA);
   const [value, setValue] = useState('');
 
@@ -65,9 +65,9 @@ function NewDiscipline(props) {
     const info = disciplineData;
     setName(info?.name ?? '');
     setDescription(info?.description ?? '');
-    setCode(info?.code ?? '');
+    setCode(info?.code ?? code);
     setSummary(info?.summary ?? '');
-    setPeriod(info?.period ?? '');
+    setPeriod(info?.period ?? period);
     setType(info?.type ?? DISCIPLINA_OBRIGATORIA);
     setValue(info?.value ?? 4);
   }, [disciplineData]);
@@ -88,7 +88,7 @@ function NewDiscipline(props) {
   }, [disciplineData]);
 
   const [labelNameStyle, setLabelNameStyle] = useState({});
-  const [labelDescriptionStyle, setlabelDescriptionStyle] = useState({});
+  // const [labelDescriptionStyle, setlabelDescriptionStyle] = useState({});
 
   const validateName = () => {
     const validation = name === '' || name === null;
@@ -98,16 +98,16 @@ function NewDiscipline(props) {
     return !validation;
   };
 
-  const validateDescription = () => {
-    const validation = description === '' || description === null;
+  // const validateDescription = () => {
+  //   const validation = description === '' || description === null;
 
-    setlabelDescriptionStyle(validation ? stylesInvalid : stylesValid);
+  //   setlabelDescriptionStyle(validation ? stylesInvalid : stylesValid);
 
-    return !validation;
-  };
+  //   return !validation;
+  // };
 
   const validateInfo = () => {
-    const valid = validateName() && validateDescription();
+    const valid = validateName();
     return valid;
   };
 
@@ -128,15 +128,16 @@ function NewDiscipline(props) {
         discipline: {
           name,
           description,
-          code,
-          // summary,
-          period,
+          code: code ?? 0,
+          summary,
+          period: period ?? 1,
           type,
           value,
           courseId: id,
           dependencias,
         },
       };
+      console.log(body);
       await createNewDiscipline(body, setLoading);
       backToCourse();
     }
@@ -148,19 +149,22 @@ function NewDiscipline(props) {
       const dependecyListIds = dependecyList.map((e) => e.id);
       const dependencias = dependecyListIds.filter((e) => !oldDependency.includes(e));
       const removeDependencies = oldDependency.filter((e) => !dependecyListIds.includes(e));
+      console.log(code);
+
       const body = {
         discipline: {
           name,
           description,
-          code,
+          code: code ?? 0,
           summary,
-          period,
+          period: period ?? 1,
           type,
           value,
           dependencias,
           removeDependencies,
         },
       };
+      console.log(body);
       await updateDisciplineByID(id, body, setLoading);
       backToProfile();
     }
@@ -202,7 +206,7 @@ function NewDiscipline(props) {
                 name="Descrição"
                 value={description}
                 onChange={setDescription}
-                styles={labelDescriptionStyle}
+                // styles={labelDescriptionStyle}
               />
               {/* <Input
                 name="Ementa"
@@ -210,12 +214,17 @@ function NewDiscipline(props) {
                 onChange={setSummary}
               /> */}
               <div className="component-newDiscipline-flex-row">
-                <Input type="number" name="Código" value={code} onChange={setCode} />
-                <Input type="number" name="Período" value={period} onChange={setPeriod} />
-                <Input type="number" name="Créditos" value={value} onChange={setValue} />
+                <div className="component-newDiscipline-flex-row-uni">
+                  <Input type="number" name="Código" value={code} onChange={setCode} />
+                </div>
+                <div className="component-newDiscipline-flex-row-uni">
+                  <Input type="number" name="Período" value={period} onChange={setPeriod} />
+                </div>
+                <div className="component-newDiscipline-flex-row-uni">
+                  <Input type="number" name="Créditos" value={value} onChange={setValue} />
+                </div>
               </div>
               <div className="component-newDiscipline-flex-row">
-                <p>Obrigatorias</p>
                 <Radio
                   color="primary"
                   checked={type === DISCIPLINA_OBRIGATORIA}
@@ -224,7 +233,7 @@ function NewDiscipline(props) {
                   name="radio-buttons"
                   inputProps={{ 'aria-label': DISCIPLINA_OBRIGATORIA }}
                 />
-                <p>Optativas Especificas</p>
+                <p>{DISCIPLINA_OBRIGATORIA}</p>
                 <Radio
                   color="primary"
                   checked={type === DISCIPLINA_OPT_ESPECIFICA}
@@ -233,7 +242,7 @@ function NewDiscipline(props) {
                   name="radio-buttons"
                   inputProps={{ 'aria-label': 'optEsp' }}
                 />
-                <p>Optativas Gerais</p>
+                <p>{DISCIPLINA_OPT_ESPECIFICA}</p>
                 <Radio
                   color="primary"
                   checked={type === DISCIPLINA_OPT_GERAL}
@@ -242,8 +251,10 @@ function NewDiscipline(props) {
                   name="radio-buttons"
                   inputProps={{ 'aria-label': 'optG' }}
                 />
+                <p>{DISCIPLINA_OPT_GERAL}</p>
               </div>
               <div className="component-newDiscipline-form-dependency">
+                <p>Adicionar dependencias:</p>
                 <Autocomplete
                   suggestion
                   data={disciplines}

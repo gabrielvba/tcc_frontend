@@ -33,9 +33,9 @@ function FluxogramaOpt(props) {
     let minOptE = 0;
     if (disciplinesOptComplete)
       disciplinesOptComplete.forEach((e) => {
-        if (e.type === DISCIPLINA_OPT_GERAL) {
+        if (e.type === DISCIPLINA_OPT_GERAL && e.status === STATUS_CONCLUIDA) {
           minOptG += e.value;
-        } else {
+        } else if (e.type === DISCIPLINA_OPT_ESPECIFICA && e.status === STATUS_CONCLUIDA) {
           minOptE += e.value;
         }
       });
@@ -64,9 +64,13 @@ function FluxogramaOpt(props) {
           return e;
         });
       const disciplinesOptCompleteEsp =
-        optsStatus && optsStatus.filter((e) => e.type === DISCIPLINA_OPT_ESPECIFICA);
+        optsStatus &&
+        optsStatus.filter(
+          (e) => e.type === DISCIPLINA_OPT_ESPECIFICA && e.status === STATUS_CONCLUIDA
+        );
       const disciplinesOptCompleteG =
-        optsStatus && optsStatus.filter((e) => e.type === DISCIPLINA_OPT_GERAL);
+        optsStatus &&
+        optsStatus.filter((e) => e.type === DISCIPLINA_OPT_GERAL && e.status === STATUS_CONCLUIDA);
       setOptCompleteEsp(disciplinesOptCompleteEsp);
       setOptCompleteG(disciplinesOptCompleteG);
       pushIncompleteOpt(optsStatus);

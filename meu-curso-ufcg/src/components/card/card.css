@@ -13,7 +13,7 @@
 
 .meu-curso-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  background-color: white;
+  background-color: #f4f4f4;
   cursor: pointer;
 }
 
@@ -55,6 +55,7 @@
 
 .meu-curso-card-info::-webkit-scrollbar {
   width: 5px;
+  height: 10px;
 }
 
 /* Track */
@@ -71,5 +72,5 @@
 
 /* Handle on hover */
 .meu-curso-card-info::-webkit-scrollbar-thumb:hover {
-  background: #009eb3;
+  background: rgb(7, 7, 7);
 }

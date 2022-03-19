@@ -30,17 +30,6 @@
   border: 0px solid #db4747;
 }
 
-.component-button-base-button::after {
-  font-weight: 400;
-  position: absolute;
-  left: 80%;
-  top: 54%;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-}
-
 .component-button-base-button:hover {
   transition: all 0.5s;
   border-radius: 30px;
@@ -49,15 +38,8 @@
 
 .component-button-base-button-color:hover {
   background: aquamarine;
-  color: black;
 }
 
-.component-button-base-button-danger:hover {
-  background: #f77847;
-}
-
-.component-button-base-button:hover::after {
-  opacity: 1;
-  transition: all 0.5s;
-  color: #f4f4f4;
+.component-button-base-danger:hover {
+  background: red;
 }

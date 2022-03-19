@@ -9,13 +9,22 @@ const ProgressBar = ({ bgcolor, progress, height }) => {
     margin: '20px',
   };
 
-  const Childdiv = {
-    height: '100%',
-    width: `${progress}%`,
-    backgroundColor: bgcolor,
-    borderRadius: 40,
-    textAlign: 'right',
-  };
+  const Childdiv =
+    progress > 100
+      ? {
+          height: '100%',
+          width: '100%',
+          backgroundColor: bgcolor,
+          borderRadius: 40,
+          textAlign: 'right',
+        }
+      : {
+          height: '100%',
+          width: `${progress}%`,
+          backgroundColor: bgcolor,
+          borderRadius: 40,
+          textAlign: 'right',
+        };
 
   const progresstext = {
     padding: 10,
