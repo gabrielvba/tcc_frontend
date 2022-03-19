@@ -108,9 +108,9 @@ export async function login(body) {
   api
     .post('/auth/login', body)
     .then(async (response) => {
-      const { token, user } = response.data;
+      const { token } = response.data;
       await localStorage.setItem('meu_curso_token', token);
-      toast(`Bem-vindo de volta ${user.name}!`);
+      toast(`Bem-vindo de volta!`);
       window.location.replace('/profile');
     })
     .catch((error) => {

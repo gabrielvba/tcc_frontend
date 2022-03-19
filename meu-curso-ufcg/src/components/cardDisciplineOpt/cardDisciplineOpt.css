@@ -13,8 +13,8 @@
 }
 
 .cardDisciplineOpt-card::-webkit-scrollbar {
+  height: 10px;
   width: 5px;
-  
 }
 
 /* Track */

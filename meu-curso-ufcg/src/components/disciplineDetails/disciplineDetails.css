@@ -27,7 +27,8 @@ p {
 }
 
 .disciplineDetails-disciplineDetailsComponent-info-description {
-  height: 300px;
+  min-height: 50px;
+  max-height: 200px;
   overflow: overlay;
   border: solid;
   border-color: aquamarine;

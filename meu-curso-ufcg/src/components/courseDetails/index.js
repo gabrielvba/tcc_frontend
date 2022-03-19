@@ -47,9 +47,11 @@ function CourseDetails(props) {
                 <p>{data.name}</p>
               </div>
               <p>Descrição:</p>
-              <div className="courseDetails-courseDetailsComponent-info-description">
-                <p>{data.description}</p>
-              </div>
+              {data.description && (
+                <div className="courseDetails-courseDetailsComponent-info-description">
+                  <p>{data.description}</p>
+                </div>
+              )}
               <p>Minimo de creditos em disciplinas:</p>
               <div className="courseDetails-courseDetailsComponent-info">
                 <p>Optativas especificas:</p>

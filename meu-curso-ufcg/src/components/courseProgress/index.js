@@ -81,28 +81,26 @@ function CourseProgress(props) {
 
   return (
     <>
-      {currentCourse && (
-        <div className="profile-userInfo-aligned">
-          {profile != null && profile.currentCourse ? (
-            <div className="profile-userInfo-course">
-              <p>{profile.currentCourse.name}</p>
-              <span>Obrigatórias</span>
-              <Progressbar bgcolor="aquamarine" progress={totalO} height={30} />
-              <span>Optativas gerais</span>
-              <Progressbar bgcolor="aquamarine" progress={totalOptG} height={30} />
-              <span>Optativas especificas</span>
-              <Progressbar bgcolor="aquamarine" progress={totalOptE} height={30} />
-            </div>
-          ) : (
-            <div className="profile-userInfo-course">
-              <p className="label">Você não está vinculado a nenhum curso</p>
-              <BaseButton styles={{ heigh: '70px', width: '130px' }} onClick={changeCourse}>
-                Buscar Curso
-              </BaseButton>
-            </div>
-          )}
-        </div>
-      )}
+      <div className="profile-userInfo-aligned">
+        {profile != null && profile.currentCourse ? (
+          <div className="profile-userInfo-course">
+            <p>{profile.currentCourse.name}</p>
+            <span>Obrigatórias</span>
+            <Progressbar bgcolor="aquamarine" progress={totalO} height={30} />
+            <span>Optativas gerais</span>
+            <Progressbar bgcolor="aquamarine" progress={totalOptG} height={30} />
+            <span>Optativas especificas</span>
+            <Progressbar bgcolor="aquamarine" progress={totalOptE} height={30} />
+          </div>
+        ) : (
+          <div className="profile-userInfo-course">
+            <p className="label">Você não está vinculado a nenhum curso</p>
+            <BaseButton styles={{ heigh: '70px', width: '130px' }} onClick={changeCourse}>
+              Buscar Curso
+            </BaseButton>
+          </div>
+        )}
+      </div>
     </>
   );
 }

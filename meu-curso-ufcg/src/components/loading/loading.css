@@ -2,8 +2,8 @@
   animation: spin 1s infinite linear;
   border: solid 2vmin transparent;
   border-radius: 50%;
-  border-right-color: #8566aa;
-  border-top-color: #8566aa;
+  border-right-color: aquamarine;
+  border-top-color: aquamarine;
   box-sizing: border-box;
   height: 20vmin;
   left: calc(50% - 10vmin);
@@ -17,8 +17,8 @@
   animation: spin 2s infinite linear;
   border: solid 2vmin transparent;
   border-radius: 50%;
-  border-right-color: #6983aa;
-  border-top-color: #6983aa;
+  border-right-color: rgb(88, 154, 252);
+  border-top-color: rgb(88, 154, 252);
   box-sizing: border-box;
   content: '';
   height: 16vmin;
@@ -32,8 +32,8 @@
   animation: spin 3s infinite linear;
   border: solid 2vmin transparent;
   border-radius: 50%;
-  border-right-color: #8ec6c5;
-  border-top-color: #8ec6c5;
+  border-right-color: cyan;
+  border-top-color: cyan;
   box-sizing: border-box;
   content: '';
   height: 12vmin;

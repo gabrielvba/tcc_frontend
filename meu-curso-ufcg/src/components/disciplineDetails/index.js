@@ -31,9 +31,11 @@ function DisciplineDetails(props) {
                 <p>{discipline.name}</p>
               </div>
               <p>Descrição:</p>
-              <div className="disciplineDetails-disciplineDetailsComponent-info-description">
-                <p>{discipline.description}</p>
-              </div>
+              {discipline.description && (
+                <div className="disciplineDetails-disciplineDetailsComponent-info-description">
+                  <p>{discipline.description}</p>
+                </div>
+              )}
               <div className="disciplineDetails-disciplineDetailsComponent-info">
                 <p>Tipo:</p>
                 <p>{discipline.type}</p>
